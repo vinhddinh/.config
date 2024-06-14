@@ -12,14 +12,14 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+  use({ "catppuccin/nvim", as = "catppuccin" })
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('haya14busa/is.vim')
+  use('github/copilot.vim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
