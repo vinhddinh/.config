@@ -37,6 +37,10 @@ mason_lspconfig.setup({
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
+
+  if client.name == 'tsserver' then
+      client.server_capabilities.document_formatting = false
+  end
 end)
 
 lsp.setup()

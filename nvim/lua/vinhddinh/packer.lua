@@ -6,7 +6,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
 	  -- or                            , branch = '0.1.x',
@@ -20,6 +19,14 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('github/copilot.vim')
+  use({
+      "L3MON4D3/LuaSnip",
+      -- follow latest release.
+      tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+      -- install jsregexp (optional!:).
+      run = "make install_jsregexp"
+  })
+  use('jose-elias-alvarez/null-ls.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
