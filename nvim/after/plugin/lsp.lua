@@ -13,7 +13,7 @@ mason.setup()
 
 local mason_lspconfig = require('mason-lspconfig')
 mason_lspconfig.setup({
-  ensure_installed = { "pyright", "tsserver" },
+  ensure_installed = { "pyright" },
   -- Add language servers you want to ensure are installed
   automatic_installation = true,
   handlers = {
