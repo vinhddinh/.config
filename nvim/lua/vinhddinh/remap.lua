@@ -40,3 +40,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
